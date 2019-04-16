@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SigninVC: UIViewController {
 
@@ -19,11 +20,48 @@ class SigninVC: UIViewController {
     }
     
     @IBAction func SiginClick(_ sender: Any) {
-        performSegue(withIdentifier: "toTabBar", sender: nil)
+        if userlabel.text != "" && passwordlabel.text != ""{
+            Auth.auth().signIn(withEmail: userlabel.text!, password: passwordlabel.text!) { (userdata, error) in
+                if error != nil {
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    let okbutton=UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+                    alert.addAction(okbutton)
+                    self.present(alert,animated: true,completion: nil)
+                }else{
+                    self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                }
+            }
+        }
+      
+       
     }
     
     @IBAction func SignupClick(_ sender: Any) {
+        
+        if userlabel.text != "" && passwordlabel.text != ""{
+            
+            Auth.auth().createUser(withEmail: userlabel.text!, password: passwordlabel.text!) { (userdata, error) in
+                if error != nil {
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    let okbutton=UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+                    alert.addAction(okbutton)
+                    self.present(alert,animated: true,completion: nil)
+                }else{
+                    self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                }
+                
+            }
+        }else{
+            let alert = UIAlertController(title: "Error", message: "username or password error", preferredStyle: UIAlertController.Style.alert)
+            let okbutton=UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okbutton)
+            self.present(alert,animated: true,completion: nil)
+        }
+        
+       
     }
     
-
 }
+    
+
+

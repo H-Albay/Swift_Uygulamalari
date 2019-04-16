@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F49C04E8B3EAD8403EC6771 /* Pods_StoryBoardApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7594D85A84FAFB6B88D1B76E /* Pods_StoryBoardApp.framework */; };
 		E40C516C22634E24009FCB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C516B22634E24009FCB8D /* AppDelegate.swift */; };
 		E40C516E22634E24009FCB8D /* FlowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C516D22634E24009FCB8D /* FlowVC.swift */; };
 		E40C517022634E24009FCB8D /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C516F22634E24009FCB8D /* UploadVC.swift */; };
@@ -14,9 +15,13 @@
 		E40C517522634E26009FCB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40C517422634E26009FCB8D /* Assets.xcassets */; };
 		E40C517822634E26009FCB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40C517622634E26009FCB8D /* LaunchScreen.storyboard */; };
 		E40C51802263511A009FCB8D /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C517F2263511A009FCB8D /* SigninVC.swift */; };
+		E40C51822263757F009FCB8D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E40C51812263757F009FCB8D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7594D85A84FAFB6B88D1B76E /* Pods_StoryBoardApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryBoardApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97656B34673CB2F7F9E52CF3 /* Pods-StoryBoardApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryBoardApp.debug.xcconfig"; path = "Target Support Files/Pods-StoryBoardApp/Pods-StoryBoardApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BA89E1D942D037D2C6A023D4 /* Pods-StoryBoardApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryBoardApp.release.xcconfig"; path = "Target Support Files/Pods-StoryBoardApp/Pods-StoryBoardApp.release.xcconfig"; sourceTree = "<group>"; };
 		E40C516822634E24009FCB8D /* StoryBoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryBoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40C516B22634E24009FCB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E40C516D22634E24009FCB8D /* FlowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowVC.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		E40C517722634E26009FCB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E40C517922634E26009FCB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40C517F2263511A009FCB8D /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
+		E40C51812263757F009FCB8D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F49C04E8B3EAD8403EC6771 /* Pods_StoryBoardApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CEBD594D27AECA3BFFBD2C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97656B34673CB2F7F9E52CF3 /* Pods-StoryBoardApp.debug.xcconfig */,
+				BA89E1D942D037D2C6A023D4 /* Pods-StoryBoardApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B9B33331909F961880F8C394 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7594D85A84FAFB6B88D1B76E /* Pods_StoryBoardApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E40C515F22634E24009FCB8D = {
 			isa = PBXGroup;
 			children = (
 				E40C516A22634E24009FCB8D /* StoryBoardApp */,
 				E40C516922634E24009FCB8D /* Products */,
+				5CEBD594D27AECA3BFFBD2C1 /* Pods */,
+				B9B33331909F961880F8C394 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +93,7 @@
 				E40C517422634E26009FCB8D /* Assets.xcassets */,
 				E40C517622634E26009FCB8D /* LaunchScreen.storyboard */,
 				E40C517922634E26009FCB8D /* Info.plist */,
+				E40C51812263757F009FCB8D /* GoogleService-Info.plist */,
 			);
 			path = StoryBoardApp;
 			sourceTree = "<group>";
@@ -77,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E40C517C22634E26009FCB8D /* Build configuration list for PBXNativeTarget "StoryBoardApp" */;
 			buildPhases = (
+				3C71B9584774846EC9E6A9E5 /* [CP] Check Pods Manifest.lock */,
 				E40C516422634E24009FCB8D /* Sources */,
 				E40C516522634E24009FCB8D /* Frameworks */,
 				E40C516622634E24009FCB8D /* Resources */,
+				F1491CC4A86D099D684E3DA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,12 +159,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40C517822634E26009FCB8D /* LaunchScreen.storyboard in Resources */,
+				E40C51822263757F009FCB8D /* GoogleService-Info.plist in Resources */,
 				E40C517522634E26009FCB8D /* Assets.xcassets in Resources */,
 				E40C517322634E24009FCB8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C71B9584774846EC9E6A9E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StoryBoardApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1491CC4A86D099D684E3DA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StoryBoardApp/Pods-StoryBoardApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StoryBoardApp/Pods-StoryBoardApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E40C516422634E24009FCB8D /* Sources */ = {
@@ -288,6 +372,7 @@
 		};
 		E40C517D22634E26009FCB8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97656B34673CB2F7F9E52CF3 /* Pods-StoryBoardApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +391,7 @@
 		};
 		E40C517E22634E26009FCB8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA89E1D942D037D2C6A023D4 /* Pods-StoryBoardApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
