@@ -28,7 +28,12 @@ class SigninVC: UIViewController {
                     alert.addAction(okbutton)
                     self.present(alert,animated: true,completion: nil)
                 }else{
-                    self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                    //self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                    UserDefaults.standard.set(userdata!.user.email, forKey: "user")
+                    UserDefaults.standard.synchronize()
+                    //appdelegate ile bağlantı kurma
+                    let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    delegate.remeberUser()
                 }
             }
         }
@@ -47,7 +52,12 @@ class SigninVC: UIViewController {
                     alert.addAction(okbutton)
                     self.present(alert,animated: true,completion: nil)
                 }else{
-                    self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                    //self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                    UserDefaults.standard.set(userdata!.user.email, forKey: "user")
+                    UserDefaults.standard.synchronize()
+                    //appdelegate ile bağlantı kurma
+                    let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    delegate.remeberUser()
                 }
                 
             }
