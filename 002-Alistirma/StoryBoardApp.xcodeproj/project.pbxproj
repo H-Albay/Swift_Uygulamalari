@@ -16,6 +16,7 @@
 		E40C517822634E26009FCB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40C517622634E26009FCB8D /* LaunchScreen.storyboard */; };
 		E40C51802263511A009FCB8D /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C517F2263511A009FCB8D /* SigninVC.swift */; };
 		E40C51822263757F009FCB8D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E40C51812263757F009FCB8D /* GoogleService-Info.plist */; };
+		E43003F4226788A400719211 /* selectimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E43003F3226788A400719211 /* selectimage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E40C517922634E26009FCB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40C517F2263511A009FCB8D /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		E40C51812263757F009FCB8D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E43003F3226788A400719211 /* selectimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectimage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				97656B34673CB2F7F9E52CF3 /* Pods-StoryBoardApp.debug.xcconfig */,
 				BA89E1D942D037D2C6A023D4 /* Pods-StoryBoardApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +86,7 @@
 		E40C516A22634E24009FCB8D /* StoryBoardApp */ = {
 			isa = PBXGroup;
 			children = (
+				E43003F3226788A400719211 /* selectimage.png */,
 				E40C516B22634E24009FCB8D /* AppDelegate.swift */,
 				E40C517F2263511A009FCB8D /* SigninVC.swift */,
 				E40C516D22634E24009FCB8D /* FlowVC.swift */,
@@ -162,6 +164,7 @@
 				E40C51822263757F009FCB8D /* GoogleService-Info.plist in Resources */,
 				E40C517522634E26009FCB8D /* Assets.xcassets in Resources */,
 				E40C517322634E24009FCB8D /* Main.storyboard in Resources */,
+				E43003F4226788A400719211 /* selectimage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

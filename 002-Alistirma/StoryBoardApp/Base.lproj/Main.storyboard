@@ -61,30 +61,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="I7o-8d-Bmm">
+                                <rect key="frame" x="37.5" y="115" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="coV-ZO-M5C"/>
+                                    <constraint firstAttribute="height" constant="200" id="ieF-r2-BLH"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sst-B4-vEu">
+                                <rect key="frame" x="37" y="358" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0g-OE-hGH">
+                                <rect key="frame" x="278" y="404" width="59" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postCilcked:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="aJG-uG-EfH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="e0g-OE-hGH" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="278" id="0V2-6N-bsE"/>
+                            <constraint firstItem="I7o-8d-Bmm" firstAttribute="leading" secondItem="sst-B4-vEu" secondAttribute="leading" id="6nh-6I-2Zl"/>
+                            <constraint firstItem="sst-B4-vEu" firstAttribute="top" secondItem="I7o-8d-Bmm" secondAttribute="bottom" constant="43" id="6uT-2k-O6u"/>
+                            <constraint firstItem="I7o-8d-Bmm" firstAttribute="trailing" secondItem="sst-B4-vEu" secondAttribute="trailing" id="PcC-oK-0KK"/>
+                            <constraint firstItem="e0g-OE-hGH" firstAttribute="top" secondItem="sst-B4-vEu" secondAttribute="bottom" constant="16" id="XI0-gb-Xgs"/>
+                            <constraint firstItem="I7o-8d-Bmm" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="eRr-U9-IHc"/>
+                            <constraint firstItem="I7o-8d-Bmm" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="51" id="nbW-hJ-rwd"/>
+                            <constraint firstItem="sst-B4-vEu" firstAttribute="trailing" secondItem="e0g-OE-hGH" secondAttribute="trailing" id="rIx-OS-QyQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <navigationItem key="navigationItem" id="z9R-Vt-qHd"/>
+                    <connections>
+                        <outlet property="commentText" destination="sst-B4-vEu" id="9vp-hO-gQd"/>
+                        <outlet property="imageView" destination="I7o-8d-Bmm" id="9zK-XU-Ls4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,5 +244,6 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="selectimage.png" width="267" height="245"/>
     </resources>
 </document>
