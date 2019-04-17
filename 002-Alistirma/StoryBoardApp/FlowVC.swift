@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import  Firebase
+import FirebaseAuth
 class FlowVC: UIViewController {
 
     override func viewDidLoad() {
@@ -15,6 +16,25 @@ class FlowVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func LogoutClick(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "user")
+        UserDefaults.standard.synchronize()
+        
+        let signIn=storyboard?.instantiateViewController(withIdentifier: "signin") as! SigninVC
+        let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.window?.rootViewController = signIn
+        delegate.remeberUser()
+        
+        do {
+            try Auth.auth().signOut()
+        } catch  {
+            print("error")
+        }
+            
+        
+            
+        
+    }
+    
 }
 
