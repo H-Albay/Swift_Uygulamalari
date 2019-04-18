@@ -38,11 +38,22 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
         let mediaFolder = storageRef.child("media")
         
         if let data = imageView.image?.jpegData(compressionQuality: 0.5){
-            let mediaImageRef = mediaFolder.child("image.jpg")
+            var uuid = NSUUID().uuidString
+            
+            let mediaImageRef = mediaFolder.child("\(uuid).jpg")
             mediaImageRef.putData(data, metadata: nil) { (metadata, error) in
                 if error != nil{
-                    
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    let okbutton=UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+                    alert.addAction(okbutton)
+                    self.present(alert,animated: true,completion: nil)
                 }else{
+                    mediaImageRef.downloadURL(completion: { (url, error) in
+                        if error == nil {
+                            //database işlemleri
+                            print("url: \(url?.absoluteString)")
+                        }
+                    })
                     
                 }
                 
