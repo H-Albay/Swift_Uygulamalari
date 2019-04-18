@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
@@ -32,6 +33,23 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
     }
 
     @IBAction func postCilcked(_ sender: Any) {
+        
+        let storageRef = Storage.storage().reference()
+        let mediaFolder = storageRef.child("media")
+        
+        if let data = imageView.image?.jpegData(compressionQuality: 0.5){
+            let mediaImageRef = mediaFolder.child("image.jpg")
+            mediaImageRef.putData(data, metadata: nil) { (metadata, error) in
+                if error != nil{
+                    
+                }else{
+                    
+                }
+                
+            }
+        }
+        
+        
     }
     
 }
