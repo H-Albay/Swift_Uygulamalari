@@ -18,7 +18,30 @@ class FlowVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+        getDataFirebase()
+        
     }
+    func getDataFirebase() {
+       let DataReference = Database.database().reference()
+        DataReference.child("Users").observe(DataEventType.childAdded) { (snapshot) in
+            //print("children: \(snapshot.children)")
+            //print("key: \(snapshot.key)")
+            //print("value: \(snapshot.value)")
+            
+            let values = snapshot.value! as! NSDictionary
+            let post = values["post"] as! NSDictionary
+            let postId = post.allKeys
+            
+            for id in postId {
+                let singlePost = post[id] as! NSDictionary
+                
+                let posttext = singlePost ["PostText"] as! String
+                print(posttext)
+            }
+            
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
