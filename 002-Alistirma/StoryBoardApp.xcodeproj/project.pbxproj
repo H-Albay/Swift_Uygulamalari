@@ -17,6 +17,7 @@
 		E40C51802263511A009FCB8D /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C517F2263511A009FCB8D /* SigninVC.swift */; };
 		E40C51822263757F009FCB8D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E40C51812263757F009FCB8D /* GoogleService-Info.plist */; };
 		E43003F4226788A400719211 /* selectimage.png in Resources */ = {isa = PBXBuildFile; fileRef = E43003F3226788A400719211 /* selectimage.png */; };
+		E473C51B226AED5E00C2F1EF /* FlowTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C51A226AED5E00C2F1EF /* FlowTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E40C517F2263511A009FCB8D /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		E40C51812263757F009FCB8D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E43003F3226788A400719211 /* selectimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectimage.png; sourceTree = "<group>"; };
+		E473C51A226AED5E00C2F1EF /* FlowTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				E40C516B22634E24009FCB8D /* AppDelegate.swift */,
 				E40C517F2263511A009FCB8D /* SigninVC.swift */,
 				E40C516D22634E24009FCB8D /* FlowVC.swift */,
+				E473C51A226AED5E00C2F1EF /* FlowTVCell.swift */,
 				E40C516F22634E24009FCB8D /* UploadVC.swift */,
 				E40C517122634E24009FCB8D /* Main.storyboard */,
 				E40C517422634E26009FCB8D /* Assets.xcassets */,
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E473C51B226AED5E00C2F1EF /* FlowTVCell.swift in Sources */,
 				E40C517022634E24009FCB8D /* UploadVC.swift in Sources */,
 				E40C516C22634E24009FCB8D /* AppDelegate.swift in Sources */,
 				E40C51802263511A009FCB8D /* SigninVC.swift in Sources */,

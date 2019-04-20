@@ -38,7 +38,7 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
         let mediaFolder = storageRef.child("media")
         
         if let data = imageView.image?.jpegData(compressionQuality: 0.5){
-            var uuid = NSUUID().uuidString
+            let uuid = NSUUID().uuidString
             
             let mediaImageRef = mediaFolder.child("\(uuid).jpg")
             mediaImageRef.putData(data, metadata: nil) { (metadata, error) in
@@ -51,7 +51,20 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                     mediaImageRef.downloadURL(completion: { (url, error) in
                         if error == nil {
                             //database işlemleri
-                            print("url: \(url?.absoluteString)")
+                           let imageUrl = url?.absoluteString
+                            let databaseReference = Database.database().reference()
+                            
+                            //let test = ["test1" : "test1" , "test2" : "test2" , "test3" : "test3"] as [String : Any]
+                            //databaseReference.child("users").child((Auth.auth().currentUser?.uid)!).child("post").childByAutoId().setValue(test)
+                            
+                            let post = ["ImageURL" : imageUrl, "PostedBy":Auth.auth().currentUser?.email, "PostText" : self.commentText.text!,"uuid" : uuid]
+                            databaseReference.child("Users").child("Userid:\((Auth.auth().currentUser?.uid)!)").child("post").childByAutoId().setValue(post)
+                           
+                            self.imageView.image = UIImage(named: "selectimage.png")
+                            self.commentText.text = ""
+                            self.tabBarController?.selectedIndex = 0
+                            
+                           // print("url: \(url?.absoluteString)")
                         }
                     })
                     
