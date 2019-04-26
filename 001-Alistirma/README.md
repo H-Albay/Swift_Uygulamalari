@@ -1,4 +1,4 @@
-# Alıstırma: Kod ile nesneleri oluşturuldu.
+# Kod ile nesne oluşturma örneği
 
 
 
