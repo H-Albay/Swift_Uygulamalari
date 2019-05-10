@@ -1,6 +1,6 @@
 # Swift_Uygulamalari
-Swift Notlarım
-
-1-Alıstırma: Web API ile Döviz Kuru Uygulaması yapıldı.
-
-![Screen Shot 2019-04-14 at 00 09 35](https://user-images.githubusercontent.com/45171336/56085318-9fe94800-5e49-11e9-8bc4-57712831d14f.png)
+## 1-Alıstırma: Kod ile nesne tanımlama alıştırması yapıldı.
+![Ekran Resmi 2019-04-26 11 37 27](https://user-images.githubusercontent.com/45171336/57521040-e25a5380-7327-11e9-9bde-cd6e3c091a1c.png)
+## 2-Alıstırma: Web API ile Döviz Kuru alıştırması yapıldı.
+![Ekran Resmi 2019-05-10 13 03 48](https://user-images.githubusercontent.com/45171336/57521119-13d31f00-7328-11e9-9725-402a99516929.png)
+## 3-Alıstırma: Sosyal medya uygulaması yapılıyor..
