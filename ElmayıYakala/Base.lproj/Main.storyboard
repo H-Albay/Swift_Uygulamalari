@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ElmayıYakala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3xr-qI-Gz6">
+                                <rect key="frame" x="29" y="390" width="153" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="zRH-Tg-NxF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-PJ-sZB">
+                                <rect key="frame" x="233" y="241" width="153" height="104"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qqj-ip-Y6w">
+                                <rect key="frame" x="29" y="241" width="153" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="UOn-q4-Zla"/>
+                                    <constraint firstAttribute="height" constant="104" id="lUn-RE-lPj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fPj-0i-FR6">
+                                <rect key="frame" x="233" y="390" width="153" height="104"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TC2-gp-pE6">
+                                <rect key="frame" x="29" y="542" width="153" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="gOr-Hg-V3A"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XUG-Ls-xVM">
+                                <rect key="frame" x="233" y="542" width="153" height="104"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En Yüksek Puan :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-8J-RjU">
+                                <rect key="frame" x="54" y="185" width="154" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="f89-xr-ILO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Süre: ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGF-Pb-IeX">
+                                <rect key="frame" x="152" y="78" width="110" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="ksE-zL-8ca"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kazanılan Puan :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-yV-YTz">
+                                <rect key="frame" x="54" y="129" width="154" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="PfH-79-Xyt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wsf-yV-YTz" secondAttribute="trailing" constant="206" id="01B-mf-Z6a"/>
+                            <constraint firstItem="fPj-0i-FR6" firstAttribute="leading" secondItem="XUG-Ls-xVM" secondAttribute="leading" id="1Sn-JM-p18"/>
+                            <constraint firstItem="qqj-ip-Y6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="4pj-0c-qh9"/>
+                            <constraint firstItem="PGF-Pb-IeX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7EC-Vr-kKK"/>
+                            <constraint firstItem="qqj-ip-Y6w" firstAttribute="trailing" secondItem="3xr-qI-Gz6" secondAttribute="trailing" id="7vi-PD-qQn"/>
+                            <constraint firstItem="RJ7-PJ-sZB" firstAttribute="trailing" secondItem="fPj-0i-FR6" secondAttribute="trailing" id="GvE-Kg-EvT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RJ7-PJ-sZB" secondAttribute="trailing" constant="28" id="HSo-Wm-Vcd"/>
+                            <constraint firstItem="jfW-8J-RjU" firstAttribute="top" secondItem="Wsf-yV-YTz" secondAttribute="bottom" constant="8" symbolic="YES" id="IrP-fE-jpF"/>
+                            <constraint firstItem="Wsf-yV-YTz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="K7m-b4-Q2o"/>
+                            <constraint firstItem="3xr-qI-Gz6" firstAttribute="leading" secondItem="TC2-gp-pE6" secondAttribute="leading" id="KVO-9H-ZkH"/>
+                            <constraint firstItem="qqj-ip-Y6w" firstAttribute="top" secondItem="jfW-8J-RjU" secondAttribute="bottom" constant="8" symbolic="YES" id="LUJ-qk-Xhy"/>
+                            <constraint firstItem="qqj-ip-Y6w" firstAttribute="leading" secondItem="3xr-qI-Gz6" secondAttribute="leading" id="SaD-xn-R6U"/>
+                            <constraint firstItem="PGF-Pb-IeX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="Ued-NE-JL5"/>
+                            <constraint firstItem="TC2-gp-pE6" firstAttribute="top" secondItem="3xr-qI-Gz6" secondAttribute="bottom" constant="48" id="VhT-jB-meT"/>
+                            <constraint firstItem="Wsf-yV-YTz" firstAttribute="top" secondItem="PGF-Pb-IeX" secondAttribute="bottom" constant="3" id="cFP-2s-vLO"/>
+                            <constraint firstItem="TC2-gp-pE6" firstAttribute="top" secondItem="XUG-Ls-xVM" secondAttribute="top" id="cSY-u3-Tq0"/>
+                            <constraint firstItem="Wsf-yV-YTz" firstAttribute="leading" secondItem="jfW-8J-RjU" secondAttribute="leading" id="efR-NU-RYO"/>
+                            <constraint firstItem="fPj-0i-FR6" firstAttribute="trailing" secondItem="XUG-Ls-xVM" secondAttribute="trailing" id="erF-rq-Gpn"/>
+                            <constraint firstItem="Wsf-yV-YTz" firstAttribute="trailing" secondItem="jfW-8J-RjU" secondAttribute="trailing" id="f5D-dw-hEW"/>
+                            <constraint firstItem="RJ7-PJ-sZB" firstAttribute="leading" secondItem="fPj-0i-FR6" secondAttribute="leading" id="fxL-1E-ddd"/>
+                            <constraint firstItem="3xr-qI-Gz6" firstAttribute="top" secondItem="qqj-ip-Y6w" secondAttribute="bottom" constant="45" id="h9B-DC-Hdc"/>
+                            <constraint firstItem="3xr-qI-Gz6" firstAttribute="top" secondItem="fPj-0i-FR6" secondAttribute="top" id="jNH-7P-KoL"/>
+                            <constraint firstItem="3xr-qI-Gz6" firstAttribute="trailing" secondItem="TC2-gp-pE6" secondAttribute="trailing" id="mlU-M9-4DO"/>
+                            <constraint firstItem="PGF-Pb-IeX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="oRC-9C-CTI"/>
+                            <constraint firstItem="TC2-gp-pE6" firstAttribute="bottom" secondItem="XUG-Ls-xVM" secondAttribute="bottom" id="pWA-Q1-H3M"/>
+                            <constraint firstItem="qqj-ip-Y6w" firstAttribute="bottom" secondItem="RJ7-PJ-sZB" secondAttribute="bottom" id="sGd-0x-G0U"/>
+                            <constraint firstItem="qqj-ip-Y6w" firstAttribute="top" secondItem="RJ7-PJ-sZB" secondAttribute="top" id="v7C-Qa-gcP"/>
+                            <constraint firstItem="3xr-qI-Gz6" firstAttribute="bottom" secondItem="fPj-0i-FR6" secondAttribute="bottom" id="x3L-LN-gkH"/>
+                            <constraint firstItem="RJ7-PJ-sZB" firstAttribute="leading" secondItem="qqj-ip-Y6w" secondAttribute="trailing" constant="51" id="xNE-xx-edg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Elma1" destination="qqj-ip-Y6w" id="5TV-KC-qRX"/>
+                        <outlet property="Elma2" destination="RJ7-PJ-sZB" id="tja-R8-FER"/>
+                        <outlet property="Elma3" destination="3xr-qI-Gz6" id="H0q-PI-qaV"/>
+                        <outlet property="Elma4" destination="fPj-0i-FR6" id="DQ3-7N-lJH"/>
+                        <outlet property="Elma5" destination="TC2-gp-pE6" id="h1H-TD-0Y8"/>
+                        <outlet property="Elma6" destination="XUG-Ls-xVM" id="FYd-El-eEP"/>
+                        <outlet property="EnYuksekPuan" destination="jfW-8J-RjU" id="tf9-O3-aIY"/>
+                        <outlet property="KalanZaman" destination="PGF-Pb-IeX" id="WgP-HP-qyK"/>
+                        <outlet property="KazanılanPuan" destination="Wsf-yV-YTz" id="riq-ZB-iaz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Apple.jpg" width="332.6400146484375" height="332.39999389648438"/>
+    </resources>
+</document>
