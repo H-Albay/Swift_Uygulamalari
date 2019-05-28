@@ -21,10 +21,22 @@ class ViewController: UIViewController {
     var puan = 0
     var zaman = Timer()
     var sayac = 0
+    var elmalar = [UIImageView()]
+    var gösterGizle = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        KazanılanPuan.text = "Kazanılan Puan: \(puan)"
-        KalanZaman.text = "Kalan Zanan: \(zaman)"
+        let enYuksekPuan = UserDefaults.standard.object(forKey: "EnYuksekPuan")
+        if enYuksekPuan == nil{
+            EnYuksekPuan.text = "0"
+        }
+        if let yenienYuksekPuan = enYuksekPuan as? Int{
+            EnYuksekPuan.text = String(yenienYuksekPuan)
+            
+        }
+        
+        KazanılanPuan.text = "Puan: \(puan)"
+        KalanZaman.text = "Kalan Zaman: \(zaman)"
         let recognizer1=UITapGestureRecognizer(target: self, action: #selector(ViewController.puanarttır))
         let recognizer2=UITapGestureRecognizer(target: self, action: #selector(ViewController.puanarttır))
         let recognizer3=UITapGestureRecognizer(target: self, action: #selector(ViewController.puanarttır))
@@ -49,11 +61,22 @@ class ViewController: UIViewController {
         KalanZaman.text = "Kalan Zaman: \(sayac)"
         zaman = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.zamanlayıcı), userInfo: nil, repeats: true)
         
+        gösterGizle = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ViewController.saklaElma), userInfo: nil, repeats: true)
+        
+        elmalar.append(Elma1)
+        elmalar.append(Elma2)
+        elmalar.append(Elma3)
+        elmalar.append(Elma4)
+        elmalar.append(Elma5)
+        elmalar.append(Elma6)
+        
+        saklaElma()
+        
     }
 
     @objc func puanarttır(){
     puan = puan + 1
-    KazanılanPuan.text = "Kazanılan Puan: \(puan)"
+    KazanılanPuan.text = "Puan: \(puan)"
     
     }
     
@@ -63,14 +86,36 @@ class ViewController: UIViewController {
         
         if sayac == 0 {
             zaman.invalidate()
+            gösterGizle.invalidate()
+            if self.puan > Int(EnYuksekPuan.text!)!{
+                UserDefaults.standard.set(self.puan, forKey: "EnYuksekPuan")
+                EnYuksekPuan.text = String(self.puan)
+            }
             
             let alert = UIAlertController(title: "Oyun bitti!", message: "Süre Doldu !", preferredStyle: .alert)
-            let dügme = UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(dügme)
+            let tamamdügme = UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil)
+            let tekrardügme = UIAlertAction(title: "Tekrar Oyna", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                self.puan = 0
+                self.KazanılanPuan.text =  "Kazanılan Puan: \(self.puan)"
+                
+                self.sayac = 55
+                self.KalanZaman.text = "Süre: \(self.sayac)"
+                
+                self.zaman = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.zamanlayıcı), userInfo: nil, repeats: true)
+                
+                self.gösterGizle = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ViewController.saklaElma), userInfo: nil, repeats: true)
+            }
+            alert.addAction(tekrardügme)
+            alert.addAction(tamamdügme)
             self.present(alert,animated: true,completion: nil)
         }
-        
-        
+    }
+    @objc func saklaElma(){
+        for elma in elmalar {
+            elma.isHidden=true
+        }
+        let rasgele = Int (arc4random_uniform(UInt32(elmalar.count - 1)))
+        elmalar[rasgele].isHidden = false
     }
 }
 
