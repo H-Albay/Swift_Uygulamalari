@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>716783632033-jgguacl2dl60q6ekrln2en2l5a42b325.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.716783632033-jgguacl2dl60q6ekrln2en2l5a42b325</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCzQHFBuH4kt6ULrN6jfY-TCTlMYwF3K_s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>716783632033</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>H-App.ChatBook</string>
+	<key>PROJECT_ID</key>
+	<string>chatbook-12098</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatbook-12098.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:716783632033:ios:d2656596309b860ff6fae0</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatbook-12098.firebaseio.com</string>
+</dict>
+</plist>
