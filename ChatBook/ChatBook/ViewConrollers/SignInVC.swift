@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+class GirisVC: UIViewController {
 
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var userText: UITextField!

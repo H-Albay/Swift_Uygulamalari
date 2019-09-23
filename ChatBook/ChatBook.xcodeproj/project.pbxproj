@@ -12,7 +12,7 @@
 		E421E1F1233551FF0004C4BD /* YükleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1F0233551FF0004C4BD /* YükleVC.swift */; };
 		E421E1F32335524F0004C4BD /* AyarlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1F22335524F0004C4BD /* AyarlarVC.swift */; };
 		E4B1F166233029790039DEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1F165233029790039DEFE /* AppDelegate.swift */; };
-		E4B1F168233029790039DEFE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1F167233029790039DEFE /* SignInVC.swift */; };
+		E4B1F168233029790039DEFE /* GirisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1F167233029790039DEFE /* GirisVC.swift */; };
 		E4B1F16B233029790039DEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B1F169233029790039DEFE /* Main.storyboard */; };
 		E4B1F16D233029820039DEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B1F16C233029820039DEFE /* Assets.xcassets */; };
 		E4B1F170233029820039DEFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B1F16E233029820039DEFE /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		E421E1F22335524F0004C4BD /* AyarlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarVC.swift; sourceTree = "<group>"; };
 		E4B1F162233029790039DEFE /* ChatBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B1F165233029790039DEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4B1F167233029790039DEFE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		E4B1F167233029790039DEFE /* GirisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisVC.swift; sourceTree = "<group>"; };
 		E4B1F16A233029790039DEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4B1F16C233029820039DEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4B1F16F233029820039DEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		E421E1F4233553910004C4BD /* ViewConrollers */ = {
 			isa = PBXGroup;
 			children = (
-				E4B1F167233029790039DEFE /* SignInVC.swift */,
+				E4B1F167233029790039DEFE /* GirisVC.swift */,
 				E421E1EE233551C70004C4BD /* AkışVC.swift */,
 				E421E1F0233551FF0004C4BD /* YükleVC.swift */,
 				E421E1F22335524F0004C4BD /* AyarlarVC.swift */,
@@ -236,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E421E1F1233551FF0004C4BD /* YükleVC.swift in Sources */,
-				E4B1F168233029790039DEFE /* SignInVC.swift in Sources */,
+				E4B1F168233029790039DEFE /* GirisVC.swift in Sources */,
 				E4E422A32338B9350016222E /* SnapVC.swift in Sources */,
 				E421E1EF233551C70004C4BD /* AkışVC.swift in Sources */,
 				E4B1F166233029790039DEFE /* AppDelegate.swift in Sources */,
