@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -118,7 +115,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F2V-0E-kI1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yükleme Ekranı.png" translatesAutoresizingMaskIntoConstraints="NO" id="F2V-0E-kI1">
                                 <rect key="frame" x="41" y="143" width="293" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="263" id="Ho4-cw-ft8"/>
@@ -146,7 +143,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PL0-3X-fyJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Yükle" id="oaf-UO-TxQ"/>
+                    <tabBarItem key="tabBarItem" title="Yükle" image="plus" catalog="system" id="oaf-UO-TxQ"/>
                     <connections>
                         <outlet property="uploadImageView" destination="F2V-0E-kI1" id="wv6-W6-BGA"/>
                     </connections>
@@ -181,7 +178,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4t0-IB-3fv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ayarlar" id="gUk-ya-9ip"/>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="wrench" catalog="system" id="gUk-ya-9ip"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSingninVC" modalPresentationStyle="fullScreen" id="9rI-ly-UMe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSV-BI-dKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +209,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zl1-0G-Qes"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Akış" id="kKM-VQ-MTg"/>
+                    <tabBarItem key="tabBarItem" title="Akış" image="house" catalog="system" id="kKM-VQ-MTg"/>
                     <connections>
                         <outlet property="tableViews" destination="BZS-c9-EAP" id="fzJ-r9-v5i"/>
                         <segue destination="onQ-zW-dMs" kind="show" identifier="toSnapVC" id="b52-7c-lzI"/>
@@ -224,11 +224,11 @@
             <objects>
                 <viewController id="onQ-zW-dMs" customClass="SnapVC" customModule="ChatBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nVj-zr-B0R">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalan Zaman: ??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8u-Tz-pfs">
-                                <rect key="frame" x="118" y="124" width="139" height="23"/>
+                                <rect key="frame" x="118" y="80" width="139" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -241,6 +241,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J1g-Ha-xub"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ygd-Qi-6dK"/>
                     <connections>
                         <outlet property="timeLabel" destination="f8u-Tz-pfs" id="vA3-UJ-W9B"/>
                     </connections>
@@ -252,7 +253,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="iFt-Dj-gEI">
             <objects>
-                <tabBarController id="MOO-dp-hQy" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MOO-dp-hQy" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WU8-YX-Nx0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -269,4 +270,10 @@
             <point key="canvasLocation" x="1188" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Yükleme Ekranı.png" width="293" height="263"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="plus" catalog="system" width="64" height="58"/>
+        <image name="wrench" catalog="system" width="64" height="62"/>
+    </resources>
 </document>

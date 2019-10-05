@@ -11,6 +11,8 @@
 		E421E1EF233551C70004C4BD /* AkışVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1EE233551C70004C4BD /* AkışVC.swift */; };
 		E421E1F1233551FF0004C4BD /* YükleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1F0233551FF0004C4BD /* YükleVC.swift */; };
 		E421E1F32335524F0004C4BD /* AyarlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1F22335524F0004C4BD /* AyarlarVC.swift */; };
+		E46921AA234117410028C890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46921A9234117400028C890 /* SceneDelegate.swift */; };
+		E4745B602347474B00A53EFD /* Yükleme Ekranı.png in Resources */ = {isa = PBXBuildFile; fileRef = E4745B5F2347474B00A53EFD /* Yükleme Ekranı.png */; };
 		E4B1F166233029790039DEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1F165233029790039DEFE /* AppDelegate.swift */; };
 		E4B1F168233029790039DEFE /* GirisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1F167233029790039DEFE /* GirisVC.swift */; };
 		E4B1F16B233029790039DEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B1F169233029790039DEFE /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		E421E1EE233551C70004C4BD /* AkışVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AkışVC.swift"; sourceTree = "<group>"; };
 		E421E1F0233551FF0004C4BD /* YükleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YükleVC.swift"; sourceTree = "<group>"; };
 		E421E1F22335524F0004C4BD /* AyarlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarVC.swift; sourceTree = "<group>"; };
+		E46921A9234117400028C890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = /Users/albay/Desktop/Swift_Uygulamalari/ChatBook/ChatBook/Delegate/SceneDelegate.swift; sourceTree = "<absolute>"; };
+		E4745B5F2347474B00A53EFD /* Yükleme Ekranı.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yükleme Ekranı.png"; sourceTree = "<group>"; };
 		E4B1F162233029790039DEFE /* ChatBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B1F165233029790039DEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4B1F167233029790039DEFE /* GirisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisVC.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		E421E1F5233553EF0004C4BD /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				E46921A9234117400028C890 /* SceneDelegate.swift */,
 				E4B1F165233029790039DEFE /* AppDelegate.swift */,
 			);
 			path = Delegate;
@@ -107,6 +112,7 @@
 				E4B1F16E233029820039DEFE /* LaunchScreen.storyboard */,
 				E4B1F17723302EBB0039DEFE /* GoogleService-Info.plist */,
 				E4B1F171233029820039DEFE /* Info.plist */,
+				E4745B5F2347474B00A53EFD /* Yükleme Ekranı.png */,
 			);
 			path = ChatBook;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			files = (
 				E4B1F170233029820039DEFE /* LaunchScreen.storyboard in Resources */,
 				E4B1F16D233029820039DEFE /* Assets.xcassets in Resources */,
+				E4745B602347474B00A53EFD /* Yükleme Ekranı.png in Resources */,
 				E4B1F17823302EBB0039DEFE /* GoogleService-Info.plist in Resources */,
 				E4B1F16B233029790039DEFE /* Main.storyboard in Resources */,
 			);
@@ -236,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E421E1F1233551FF0004C4BD /* YükleVC.swift in Sources */,
+				E46921AA234117410028C890 /* SceneDelegate.swift in Sources */,
 				E4B1F168233029790039DEFE /* GirisVC.swift in Sources */,
 				E4E422A32338B9350016222E /* SnapVC.swift in Sources */,
 				E421E1EF233551C70004C4BD /* AkışVC.swift in Sources */,
@@ -390,6 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JJSL5HC93;
 				INFOPLIST_FILE = ChatBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JJSL5HC93;
 				INFOPLIST_FILE = ChatBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
