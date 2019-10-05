@@ -11,6 +11,7 @@
 		E421E1EF233551C70004C4BD /* AkışVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1EE233551C70004C4BD /* AkışVC.swift */; };
 		E421E1F1233551FF0004C4BD /* YükleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1F0233551FF0004C4BD /* YükleVC.swift */; };
 		E421E1F32335524F0004C4BD /* AyarlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421E1F22335524F0004C4BD /* AyarlarVC.swift */; };
+		E42B4CC62348C814008736D9 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B4CC52348C814008736D9 /* UserSingleton.swift */; };
 		E46921AA234117410028C890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46921A9234117400028C890 /* SceneDelegate.swift */; };
 		E4745B602347474B00A53EFD /* Yükleme Ekranı.png in Resources */ = {isa = PBXBuildFile; fileRef = E4745B5F2347474B00A53EFD /* Yükleme Ekranı.png */; };
 		E4B1F166233029790039DEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1F165233029790039DEFE /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		E421E1EE233551C70004C4BD /* AkışVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AkışVC.swift"; sourceTree = "<group>"; };
 		E421E1F0233551FF0004C4BD /* YükleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YükleVC.swift"; sourceTree = "<group>"; };
 		E421E1F22335524F0004C4BD /* AyarlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarVC.swift; sourceTree = "<group>"; };
+		E42B4CC52348C814008736D9 /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		E46921A9234117400028C890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = /Users/albay/Desktop/Swift_Uygulamalari/ChatBook/ChatBook/Delegate/SceneDelegate.swift; sourceTree = "<absolute>"; };
 		E4745B5F2347474B00A53EFD /* Yükleme Ekranı.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yükleme Ekranı.png"; sourceTree = "<group>"; };
 		E4B1F162233029790039DEFE /* ChatBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,14 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		E42B4CC42348C7E2008736D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E42B4CC52348C814008736D9 /* UserSingleton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E4B1F159233029790039DEFE = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		E4B1F164233029790039DEFE /* ChatBook */ = {
 			isa = PBXGroup;
 			children = (
+				E42B4CC42348C7E2008736D9 /* Model */,
 				E421E1F5233553EF0004C4BD /* Delegate */,
 				E421E1F4233553910004C4BD /* ViewConrollers */,
 				E4B1F169233029790039DEFE /* Main.storyboard */,
@@ -247,6 +258,7 @@
 				E4B1F168233029790039DEFE /* GirisVC.swift in Sources */,
 				E4E422A32338B9350016222E /* SnapVC.swift in Sources */,
 				E421E1EF233551C70004C4BD /* AkışVC.swift in Sources */,
+				E42B4CC62348C814008736D9 /* UserSingleton.swift in Sources */,
 				E4B1F166233029790039DEFE /* AppDelegate.swift in Sources */,
 				E421E1F32335524F0004C4BD /* AyarlarVC.swift in Sources */,
 			);
