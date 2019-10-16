@@ -20,6 +20,7 @@ class Yu_kleVC: UIViewController ,UIImagePickerControllerDelegate,UINavigationCo
        
     }
     @IBAction func uploadClicked(_ sender: Any) {
+        //Storage
         let storage = Storage.storage()
         let storageRef = storage.reference()
         let mediaFolder = storageRef.child("Medya")
@@ -33,14 +34,46 @@ class Yu_kleVC: UIViewController ,UIImagePickerControllerDelegate,UINavigationCo
                     imageRef.downloadURL { (url, error) in
                         if error == nil {
                             let imageUrl = url?.absoluteString
+                            //Firestore
                             let fireStore = Firestore.firestore()
-                            let medyahakkında = ["URL" : imageUrl!,"Medya Kullanıcısı": UserSingleton.sharedUserInfo.kullanıcıadı,"Tarih": FieldValue.serverTimestamp()] as [String : Any]
-                            fireStore.collection("Medyalar").addDocument(data: medyahakkında) { (error) in
+                            
+                            fireStore.collection("Medyalar").whereField("Medya Kullanıcısı", isEqualTo: UserSingleton.sharedUserInfo.kullanıcıadı).getDocuments { (medya, error) in
                                 if error != nil {
                                     self.makeAlert(title: "Hata", message: error?.localizedDescription ?? "Hata")
-                                } else {
-                                    //Tabbarda indexleme mevcuttur burada anasayfa gidicek.
-                                    self.tabBarController?.selectedIndex = 0
+                                }else{
+                                    if medya?.isEmpty == false && medya !=  nil {
+                                        for document in medya!.documents {
+                                            let documentId = document.documentID
+                                            
+                                            if var URL_Dizisi = document.get("URL_Dizisi") as? [String] {
+                                                URL_Dizisi.append(imageUrl!)
+                                                
+                                                let additionalDictionary = ["URL_Dizisi":URL_Dizisi] as [String : Any]
+                                                
+                                                
+                                                fireStore.collection("Medyalar").document(documentId).setData(additionalDictionary, merge: true) { (error) in
+                                                    if error != nil {
+                                                        self.tabBarController?.selectedIndex = 0
+                                                        self.uploadImageView.image = UIImage(named: "Yükleme Ekranı.png")
+                                                    }
+                                                }
+                                                
+                                                
+                                            }
+                                        }
+                                    }else {
+                                        let medyahakkında = ["URL_Dizisi" : [imageUrl!],"Medya Kullanıcısı": UserSingleton.sharedUserInfo.kullanıcıadı,"Tarih": FieldValue.serverTimestamp()] as [String : Any]
+                                        fireStore.collection("Medyalar").addDocument(data: medyahakkında) { (error) in
+                                            if error != nil {
+                                                self.makeAlert(title: "Hata", message: error?.localizedDescription ?? "Hata")
+                                            } else {
+                                                //Tabbarda indexleme mevcuttur burada anasayfa gidicek.
+                                                self.tabBarController?.selectedIndex = 0
+                                                self.uploadImageView.image=UIImage(named: "Yükleme Ekranı.png")
+                                            }
+                                        }
+                                        
+                                    }
                                 }
                             }
                         }
